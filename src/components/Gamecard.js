@@ -6,8 +6,8 @@ class Gamecard extends Component {
 constructor(props) {
     super(props);
     this.state = {
-        homeTeam: 'Home',
-        awayTeam: 'Away',
+        homeTeam: props.homeTeam,
+        awayTeam: props.awayTeam,
         homeTeamScore: 0,
         awayTeamScore: 0
     };
@@ -17,7 +17,7 @@ render() {
       [
       <div className="teamCardContainer">
         <div className="teamCard">
-        
+        <p>{this.state.homeTeam}</p>
         </div>
           
 
