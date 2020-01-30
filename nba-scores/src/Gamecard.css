@@ -1,0 +1,14 @@
+.teamCard {
+    background-color: #f7f7f7;
+    box-shadow: 2px 2px;
+    border-radius: 5px;
+    display:inline-block;
+    min-height: 200px;
+    min-width: 500px;
+  
+    margin:auto;
+  }
+  
+  .teamCardContainer {
+    text-align: center;
+  }
