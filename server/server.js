@@ -9,7 +9,8 @@ app.use(cors());
 let data = '';
 
 function getData() {
-    request('https://data.nba.net/10s/prod/v1/20200129/scoreboard.json', { json: true }, (err, res, body) => {
+    let todayDate = new Date().toISOString().slice(0,10).split('-').join("");
+    request('https://data.nba.net/10s/prod/v1/' + todayDate + '/scoreboard.json', { json: true }, (err, res, body) => {
     if (err) { return console.log(err); }
     data = res.body.games;
     

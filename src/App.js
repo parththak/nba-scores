@@ -55,7 +55,7 @@ class App extends Component {
     
         </div>
         { this.state.games.map(function(game) {
-          return <Gamecard homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode}/>
+          return <Gamecard homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score}/>
         })} 
         
       </div>

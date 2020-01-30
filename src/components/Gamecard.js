@@ -8,16 +8,24 @@ constructor(props) {
     this.state = {
         homeTeam: props.homeTeam,
         awayTeam: props.awayTeam,
-        homeTeamScore: 0,
-        awayTeamScore: 0
+        homeTeamScore: props.homeTeamScore,
+        awayTeamScore: props.awayTeamScore
     };
 }
 render() {
     return (
       [
-      <div className="teamCardContainer">
-        <div className="teamCard">
-        <p>{this.state.homeTeam}</p>
+      <div className="gameCardContainer">
+        <div className="gameCard">
+          <div className="teamCard">
+            <img></img>
+            <p>{this.state.homeTeam}:{this.state.homeTeamScore}</p>
+          </div>
+
+          <div className="teamCard">
+              <p>{this.state.awayTeam}:{this.state.awayTeamScore}</p>         
+           </div>
+      
         </div>
           
 
