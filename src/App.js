@@ -23,7 +23,7 @@ class App extends Component {
     this.setState({
       date: new Date()
     });
-    Api.getGamesToday();
+    //Api.getGamesToday();
   };
   // componentDidMount() {
   //   fetch('http://data.nba.net/10s/prod/v1/20200129/scoreboard.json')
