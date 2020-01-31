@@ -12,6 +12,8 @@ constructor(props) {
         awayTeamScore: props.awayTeamScore ? props.awayTeamScore : 0
     };
 }
+
+
 render() {
     return (
       [

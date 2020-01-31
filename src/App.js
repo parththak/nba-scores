@@ -25,11 +25,10 @@ class App extends Component {
   }
 
   getGamesToday() {
-    let currComponent = this
+    let currComponent = this;
     axios.get('http://localhost:8080/games')
     .then(function (response) {
       // handle success
-      //console.log(JSON.stringify(response));
       let result = []
       response.data.forEach(function(game) {
         result.push(game);
@@ -55,7 +54,9 @@ class App extends Component {
     
         </div>
         { this.state.games.map(function(game) {
-          return <Gamecard homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score}/>
+            console.log(game.hTeam.score)
+
+            return <Gamecard key = {game.hTeam.score + game.vTeam.score} homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score}/>
         })} 
         
       </div>
