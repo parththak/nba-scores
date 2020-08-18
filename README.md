@@ -1,11 +1,8 @@
 # This app displays the NBA scores for the current day
 ### How to run:
 1. After cloning run `npm i` to download all the dependencies
-1. cd in to the server folder
-2. Run `node server.js`
-3. Open another terminal and cd into the main project directory
-4. Run `npm start`
-5. App should open in the new browser displaying the current scores
+2. Run `npm run local`
+3. App should open in the new browser displaying the current scores
 
 
 ### Tech stack:
