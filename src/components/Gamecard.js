@@ -9,7 +9,10 @@ constructor(props) {
         homeTeam: props.homeTeam,
         awayTeam: props.awayTeam,
         homeTeamScore: props.homeTeamScore ? props.homeTeamScore : 0 ,
-        awayTeamScore: props.awayTeamScore ? props.awayTeamScore : 0
+        awayTeamScore: props.awayTeamScore ? props.awayTeamScore : 0,
+        period: props.period,
+        game: props.game,
+        clock: props.clock
     };
 }
 
@@ -25,6 +28,11 @@ render() {
 
           <div className="teamCard">
               <p>{this.state.awayTeam}: {this.state.awayTeamScore}</p>         
+           </div>
+
+       
+           <div className="teamCard">
+              <p>{this.state.game ? "Period: " +  this.state.period  : "FINAL"}</p>         
            </div>
       
         </div>
