@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount() {
     this.timerID = setInterval(
       () => this.getGamesToday(),
-      3000
+      1000
     );
   };
 
@@ -31,8 +31,10 @@ class App extends Component {
       // handle success
       let result = []
       response.data.forEach(function(game) {
+        
         result.push(game);
       });
+      console.log("total games: " + result);
       currComponent.setState({
         date: new Date(),
         games: result
@@ -48,13 +50,14 @@ class App extends Component {
 
   render() {
     return (
-      [ <div >
+      [ <div key ={"bruh"} >
         <div className='title' >
           <h1>NBA Scores for {this.state.date.toDateString()} </h1>
     
         </div>
         { this.state.games.map(function(game) {
-            return <Gamecard key = {game.hTeam.score + game.vTeam.score} homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score}/>
+            return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.hTeam.triCode} homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} 
+            homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score}/>
         })} 
         
       </div>

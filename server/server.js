@@ -19,7 +19,7 @@ function getData() {
     request('https://data.nba.net/10s/prod/v1/'+ year + month + date +'/scoreboard.json', { json: true }, (err, res, body) => {
     if (err) { return console.log(err); }
     data = res.body.games;
-    
+
 });
 
 }
