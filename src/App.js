@@ -50,14 +50,16 @@ class App extends Component {
 
   render() {
     return (
-      [ <div key ={"bruh"} >
+      [ <div key ={999} >
         <div className='title' >
           <h1>NBA Scores for {this.state.date.toDateString()} </h1>
     
         </div>
         { this.state.games.map(function(game) {
-            return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.hTeam.triCode} homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} 
-            homeTeamScore={game.hTeam.score}  awayTeamScore={game.vTeam.score} period ={game.period.current} game = {game.isGameActivated} clock = {game.clock}/>
+            return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.hTeam.triCode} 
+            homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  
+            awayTeamScore={game.vTeam.score} period ={game.period.current} game = {game.isGameActivated} 
+            clock = {game.clock}/>
         })} 
         
       </div>

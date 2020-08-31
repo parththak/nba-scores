@@ -16,9 +16,10 @@ function getData() {
     if (month < 10) {
         month = "0" + month.toString();
     }
-    request('https://data.nba.net/10s/prod/v1/'+ year + month + date +'/scoreboard.json', { json: true }, (err, res, body) => {
-    if (err) { return console.log(err); }
-    data = res.body.games;
+    request('https://data.nba.net/10s/prod/v1/'+ year + month + date +'/scoreboard.json', { json: true }, 
+        (err, res, body) => {
+        if (err) { return console.log(err); }
+        data = res.body.games;
 
 });
 
