@@ -32,6 +32,7 @@ class App extends Component {
     .then(function (response) {
       // handle success
       let result = []
+      console.log(response.data)
       response.data.forEach(function(game) {
         
         result.push(game);
