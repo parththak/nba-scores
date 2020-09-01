@@ -15,5 +15,5 @@
 * Update the UI to include team logos
 * Update the UI to include current period and time left 
 * Add player stats to expandable team card
-* :heavy_check_mark: Add to Heroku cloud servers using docker 
+:heavy_check_mark: Add to Heroku cloud servers using docker 
 
