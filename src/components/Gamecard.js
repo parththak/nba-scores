@@ -30,10 +30,18 @@ render() {
               <p>{this.state.awayTeam}: {this.state.awayTeamScore}</p>         
            </div>
 
-       
-           <div className="teamCard">
-              <p>{this.state.game ? "Period: " +  this.state.period  : "FINAL"}</p>         
-           </div>
+          <div className="period">
+
+            <div className="teamCard">
+                <p>{this.state.game ? "Period: " +  this.state.period : "FINAL"}</p>         
+            </div>
+
+            {this.state.game ? <div className="teamCard">
+                <p>{"Time: " + this.state.clock } </p>  </div> : ""        
+            }
+            
+          </div>
+           
       
         </div>
           

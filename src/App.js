@@ -9,7 +9,8 @@ class App extends Component {
     super(props);
     this.state = {
       date: new Date(),
-      games: []
+      games: [],
+      num: 0
     }
   };
   
@@ -26,6 +27,7 @@ class App extends Component {
 
   getGamesToday() {
     let currComponent = this;
+    let old = this.state.num
     axios.get('http://localhost:8080/games')
     .then(function (response) {
       // handle success
@@ -34,10 +36,10 @@ class App extends Component {
         
         result.push(game);
       });
-      console.log("total games: " + result);
       currComponent.setState({
         date: new Date(),
-        games: result
+        games: result,
+        num: old + 1
       })
     })
     .catch(function (error) {
@@ -50,16 +52,16 @@ class App extends Component {
 
   render() {
     return (
-      [ <div key ={999} >
+      [ <div key ={this.state.num} >
         <div className='title' >
           <h1>NBA Scores for {this.state.date.toDateString()} </h1>
     
         </div>
-        { this.state.games.map(function(game) {
-            return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.hTeam.triCode} 
+        { this.state.games.map((game) => {
+            return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.vTeam.triCode} 
             homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  
             awayTeamScore={game.vTeam.score} period ={game.period.current} game = {game.isGameActivated} 
-            clock = {game.clock}/>
+            clock = {game.clock} />
         })} 
         
       </div>
