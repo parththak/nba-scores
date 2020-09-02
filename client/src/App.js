@@ -55,7 +55,8 @@ class App extends Component {
       [ <div key ={this.state.num} >
         <div className='title' >
           <h1>NBA Scores for {this.state.date.toDateString()} </h1>
-    
+          <img src={require("./assests/NBA.png")} alt="NBA logo" width="100" height="80"/>
+
         </div>
         { this.state.games.map((game) => {
             return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.vTeam.triCode} 
