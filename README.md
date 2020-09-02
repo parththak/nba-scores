@@ -24,7 +24,7 @@
 
 
 ### Todo:
-* Update the UI to include team logos
+* Update the UI to include team logos :heavy_check_mark:
 * Update the UI to include current period and time left :heavy_check_mark:
 * Add player stats to expandable team card
 * Add to Heroku cloud servers using docker :heavy_check_mark:
