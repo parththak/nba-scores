@@ -52,7 +52,7 @@ app.get("/games", function(req,response,next) {
 
 
 const http = require('http');
-const PORT = process.env.PORT | 8080;
+const PORT = process.env.PORT | 8000;
 
 http.createServer(app).listen(PORT, function (err) {
     if (err) console.log(err);

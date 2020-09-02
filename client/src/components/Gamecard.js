@@ -22,18 +22,31 @@ render() {
       [
       <div className="gameCardContainer">
         <div className="gameCard">
-          <div className="teamCard">
-            <p>{this.state.homeTeam}: {this.state.homeTeamScore}</p>
+
+          <div className="team"> 
+            <div className="teamCard">
+              <img src={require("../assests/" + this.state.homeTeam + ".png")} alt="Home team" width="50" height="50"/>
+            </div>
+            <div className="teamCard">
+              <p>{this.state.homeTeam}: {this.state.homeTeamScore}</p>
+            </div>
           </div>
 
-          <div className="teamCard">
-              <p>{this.state.awayTeam}: {this.state.awayTeamScore}</p>         
-           </div>
-
+          <div className="team"> 
+            <div className="teamCard">
+              <img src={require("../assests/" + this.state.awayTeam + ".png")} alt="Home team" width="50" height="50"/>
+            </div>
+            <div className="teamCard">
+              <p>{this.state.awayTeam}: {this.state.awayTeamScore}</p>
+            </div>
+          </div>
+          
           <div className="period">
 
             <div className="teamCard">
-                <p>{this.state.game ? "Period: " +  this.state.period : "FINAL"}</p>         
+                <p>{this.state.game || this.state.awayTeamScore + this.state.homeTeamScore === 0 
+                ? "Period: " +  this.state.period 
+                : "FINAL"}</p>         
             </div>
 
             {this.state.game ? <div className="teamCard">

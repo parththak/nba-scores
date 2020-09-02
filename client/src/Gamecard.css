@@ -20,3 +20,12 @@
     display: flex;
     justify-content: space-evenly;
   }
+
+  .teamCard {
+    margin-left: 2vh;
+  }
+  .team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

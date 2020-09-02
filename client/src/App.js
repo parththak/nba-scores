@@ -28,7 +28,7 @@ class App extends Component {
   getGamesToday() {
     let currComponent = this;
     let old = this.state.num
-    axios.get('http://localhost:8080/games')
+    axios.get('http://localhost:8000/games')
     .then(function (response) {
       // handle success
       let result = []
