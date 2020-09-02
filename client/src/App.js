@@ -61,7 +61,7 @@ class App extends Component {
             return <Gamecard key = {game.hTeam.score + game.vTeam.score + game.vTeam.triCode} 
             homeTeam={game.hTeam.triCode} awayTeam={game.vTeam.triCode} homeTeamScore={game.hTeam.score}  
             awayTeamScore={game.vTeam.score} period ={game.period.current} game = {game.isGameActivated} 
-            clock = {game.clock} />
+            clock = {game.clock} time = {game.startTimeEastern} />
         })} 
         
       </div>
